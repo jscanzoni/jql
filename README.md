@@ -41,9 +41,11 @@ ORDER BY lastViewed ASC
 ( 
   assignee in (currentUser()) 
   OR project = "Jason Scanzoni Tasks" 
-  OR (summary ~ currentUser() 
+  OR (
+    summary ~ currentUser() 
     OR description ~ currentUser() 
-    OR comment ~ currentUser()) AND 
+    OR comment ~ currentUser()
+  ) AND 
   status not in (Done, Deployed, Resolved, Closed) AND 
   updatedDate >= -7d AND 
   Sprint in (openSprints())
