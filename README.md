@@ -61,3 +61,5 @@ issuetype != Epic AND
 ) 
 ORDER BY duedate ASC, priority DESC, updated ASC, createdDate ASC
 ```
+
+![Screenshot of swimlanes in JIRA](https://github.com/jscanzoni/jql/blob/master/Swimlanes%20Configuration.png)
