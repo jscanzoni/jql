@@ -1,4 +1,4 @@
-# jql
+# My Favorite JQL Quries
 
 ###My Current Tickets without Estimates 
 ```JQL
@@ -32,7 +32,7 @@ updatedDate >= -7d
 ORDER BY lastViewed ASC
 ```
 
-###My Open Tasks 
+###My Open Tasks -- JDS Kanban Board
 ```JQL
 (
   status not in (Done, Deployed, Resolved, Closed, "Ready for Production") OR 
