@@ -1,26 +1,26 @@
 # My Favorite JQL Quries
 
-###My Current Tickets without Estimates 
+### My Current Tickets without Estimates 
 ```JQL
 Sprint in (openSprints()) AND "Story Points" is EMPTY AND assignee = currentUser()
 ```
 
-###My Future Tickets without Estimates 
+### My Future Tickets without Estimates 
 ```JQL
 Sprint in (futureSprints()) AND "Story Points" is EMPTY AND assignee = currentUser()
 ```
 
-###Completed in last 24 Hours
+### Completed in last 24 Hours
 ```JQL
 status changed to done after -1d  AND project in (projectsLeadByUser())
 ```
 
-###Added in the last 24 Hours
+### Added in the last 24 Hours
 ```JQL
 created >= -1d AND project in (projectsLeadByUser()) ORDER BY sprint ASC, created DESC
 ```
 
-###Mentions Me
+### Mentions Me
 ```JQL
 (
   summary ~ currentUser() OR 
@@ -32,7 +32,7 @@ updatedDate >= -7d
 ORDER BY lastViewed ASC
 ```
 
-###My Open Tasks -- JDS Kanban Board
+### My Open Tasks -- JDS Kanban Board
 ```JQL
 (
   status not in (Done, Deployed, Resolved, Closed, "Ready for Production") OR 
